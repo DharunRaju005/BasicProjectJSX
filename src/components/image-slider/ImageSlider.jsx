@@ -39,18 +39,40 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
 
   console.log(images);
 
+  const handlePrev=()=>{
+    setCurrentSlide(currentSlide===0 ? images.length-1:currentSlide-1);
+  }
+
+  const handleNext=()=>{
+    setCurrentSlide(currentSlide===images.length-1 ? 0:currentSlide+1);
+
+  }
+
   return (
     <ImageContainer>
-      <BsArrowLeftCircleFill />
+
+      <ArrowLeft onClick={handlePrev}/>
+
       {images && images.length && images.map((imageItem,index) =>( 
-      <CurrentImage key={imageItem.id}
-       alt={imageItem.download_url} 
-       src={imageItem.download_url} />
+      <CurrentImage 
+        key={imageItem.id}
+        alt={imageItem.download_url} 
+        src={imageItem.download_url}
+        active={currentSlide===index} />
       ))}
-      <BsArrowRightCircleFill />
+
+      <ArrowRight onClick={handleNext}/>
+
       <CircleIndicator>
-        {images && images.length ? images.map((_, index) =>
-         <CurrentIndicator key={index} ></CurrentIndicator>) : null}</CircleIndicator>
+        {
+          images && images.length && images.map((_, index) =>
+            <CurrentIndicator 
+            key={index}
+            active={currentSlide===index}
+            onClick={()=>setCurrentSlide(index)} />)
+        }
+      </CircleIndicator>
+
     </ImageContainer>
   );
 };
@@ -63,17 +85,59 @@ const ImageContainer = styled.div`
   width: 600px;
   height: 450px;
 
-  img {
+
+`;
+
+const CurrentImage = styled.img`
     border-radius: 0.5rem;
     box-shadow: 0px 0px 7px #666;
     width: 100%;
     height: 100%;
-  }
+    margin-left:10px;
+    display:${(prop)=>(prop.active)? 'block' : 'none'};
+  //background-color: ${(props) => (props.active ? "#ffc107" : "#e4e5e9")};
+
+
 `;
 
-const CurrentImage = styled.div``;
+const ArrowLeft=styled(BsArrowLeftCircleFill)`
+  position:absolute;
+  width:2rem;
+  height:2rem;
+  color:#fff;
+  filter:drop-shadow(0px 0px 5px #555);
+  left:1rem
 
-const CurrentIndicator = styled.button``;
 
-const CircleIndicator = styled.span``;
+`
+
+const ArrowRight=styled(BsArrowRightCircleFill)`
+  position:absolute;
+  position:absolute;
+  width:2rem;
+  height:2rem;
+  color:#fff;
+  filter:drop-shadow(0px 0px 5px #555);
+  right:1rem;
+
+`
+
+const CurrentIndicator = styled.button`
+  background-color:white;
+  height:15px;
+  width:15px;
+  border-radius:50%;
+  border:none;
+  margin:0 0.2rem;
+  cursor:pointer;
+  background-color: ${(props) => (props.active ? "#ffc107" : "#e4e5e9")};
+
+
+`;
+
+const CircleIndicator = styled.span`
+display:flex;
+position:absolute;
+bottom:1rem;
+`;
 export default ImageSlider;
