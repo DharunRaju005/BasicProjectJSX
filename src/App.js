@@ -3,6 +3,9 @@ import ImageSlider from "./components/image-slider/ImageSlider"
 import LoadMore from "./components/load-more/LoadMore"
 import QrGenerator from "./components/qr-generator/QrGenerator";
 
+import TreeView from "./components/tree-view/TreeView"
+import menus from "./components/tree-view/data";
+
 function App() {
   return (
     <div className="App">
@@ -15,7 +18,9 @@ function App() {
 
       
 
-      <LoadMore/>
+      {/* <LoadMore/> */}
+
+      <TreeView menus={menus}/>
 
       {/* <QrGenerator/> */}
 
