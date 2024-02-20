@@ -1,5 +1,6 @@
 import StarRating from "./components/StarRating";
 import ImageSlider from "./components/image-slider/ImageSlider"
+import LightDark from "./components/light-dark-mode/LightDak";
 import LoadMore from "./components/load-more/LoadMore"
 import QrGenerator from "./components/qr-generator/QrGenerator";
 
@@ -22,7 +23,10 @@ function App() {
 
       {/* <TreeView menus={menus}/> */}
 
-      <QrGenerator/>
+      {/* <QrGenerator/> */}
+
+      
+      <LightDark/>
 
     </div>
   );
