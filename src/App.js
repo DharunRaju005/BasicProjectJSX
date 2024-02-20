@@ -20,9 +20,9 @@ function App() {
 
       {/* <LoadMore/> */}
 
-      <TreeView menus={menus}/>
+      {/* <TreeView menus={menus}/> */}
 
-      {/* <QrGenerator/> */}
+      <QrGenerator/>
 
     </div>
   );
