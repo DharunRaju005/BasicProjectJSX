@@ -2,6 +2,7 @@ import StarRating from "./components/StarRating";
 import ImageSlider from "./components/image-slider/ImageSlider"
 import LightDark from "./components/light-dark-mode/LightDak";
 import LoadMore from "./components/load-more/LoadMore"
+import ModelTest from "./components/model-mockup/ModelTest";
 import QrGenerator from "./components/qr-generator/QrGenerator";
 import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
 import TabTest from "./components/tabs/TabTest";
@@ -32,7 +33,11 @@ function App() {
 
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
 
-      <TabTest />
+      {/* <TabTest /> */}
+
+      <ModelTest/>
+
+
 
     </div>
   );
