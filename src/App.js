@@ -4,6 +4,8 @@ import LightDark from "./components/light-dark-mode/LightDak";
 import LoadMore from "./components/load-more/LoadMore"
 import QrGenerator from "./components/qr-generator/QrGenerator";
 import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
+import TabTest from "./components/tabs/TabTest";
+import Tabs from "./components/tabs/Tabs";
 import TreeView from "./components/tree-view/TreeView"
 import menus from "./components/tree-view/data";
 
@@ -28,7 +30,9 @@ function App() {
       
       {/* <LightDark/> */}
 
-      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
+      {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
+
+      <TabTest />
 
     </div>
   );
