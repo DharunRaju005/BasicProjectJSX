@@ -1,4 +1,5 @@
 import StarRating from "./components/StarRating";
+import GitHubProfileFider from "./components/github-profile-finder/GitHubProfileFider";
 import ImageSlider from "./components/image-slider/ImageSlider"
 import LightDark from "./components/light-dark-mode/LightDak";
 import LoadMore from "./components/load-more/LoadMore"
@@ -35,7 +36,9 @@ function App() {
 
       {/* <TabTest /> */}
 
-      <ModelTest/>
+      {/* <ModelTest/> */}
+
+      <GitHubProfileFider/>
 
 
 
