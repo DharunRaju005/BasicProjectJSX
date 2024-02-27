@@ -11,6 +11,8 @@ import Tabs from "./components/tabs/Tabs";
 import TreeView from "./components/tree-view/TreeView"
 import menus from "./components/tree-view/data";
 
+import SearchAutoComplete from "./components/search-autocomplete/SearchAutoComplete";
+
 function App() {
   return (
     <div className="App">
@@ -38,8 +40,9 @@ function App() {
 
       {/* <ModelTest/> */}
 
-      <GitHubProfileFider/>
+      {/* <GitHubProfileFider/> */}
 
+      <SearchAutoComplete/>
 
 
     </div>
