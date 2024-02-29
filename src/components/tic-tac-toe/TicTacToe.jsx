@@ -6,7 +6,7 @@ import styled from "styled-components";
 // 6 7 8
 
 const TicTacToe = () => {
-  console.log("Component rendered");
+  //console.log("Component rendered");
   const Square = React.memo(({ value, onClick }) => {
     return <ButtonSqr onClick={onClick}>{value}</ButtonSqr>;
   });
@@ -66,6 +66,7 @@ const TicTacToe = () => {
     } else {
       setStatus(`Next player is ${isXTurn ? "X" : "O"}`);
     }
+    console.log(squares);
   }, [squares, isXTurn]);
 
   return (
