@@ -13,6 +13,7 @@ import menus from "./components/tree-view/data";
 
 import SearchAutoComplete from "./components/search-autocomplete/SearchAutoComplete";
 import Test from "./components/use-fetch-custom-hook/Test";
+import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 
 function App() {
   return (
@@ -39,7 +40,10 @@ function App() {
 
       {/* <SearchAutoComplete/> */}
 
-      <Test />
+      {/* <Test /> */}
+
+      <TicTacToe />
+
     </div>
   );
 }
