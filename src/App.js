@@ -14,6 +14,8 @@ import menus from "./components/tree-view/data";
 import SearchAutoComplete from "./components/search-autocomplete/SearchAutoComplete";
 import Test from "./components/use-fetch-custom-hook/Test";
 import TicTacToe from "./components/tic-tac-toe/TicTacToe";
+import FeatureFlagGlobalState from "./components/feature-flag/context/FeatureFlagGlobalState";
+import FeatureFlags from "./components/feature-flag/FeatureFlags";
 
 function App() {
   return (
@@ -42,8 +44,11 @@ function App() {
 
       {/* <Test /> */}
 
-      <TicTacToe />
+      {/* <TicTacToe /> */}
 
+      <FeatureFlagGlobalState>
+        <FeatureFlags />
+      </FeatureFlagGlobalState>
     </div>
   );
 }
