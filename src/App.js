@@ -17,6 +17,7 @@ import TicTacToe from "./components/tic-tac-toe/TicTacToe";
 import FeatureFlagGlobalState from "./components/feature-flag/context/FeatureFlagGlobalState";
 import FeatureFlags from "./components/feature-flag/FeatureFlags";
 import OutsideClickTest from "./components/use-outside-click/OutsideClickTest";
+import WindowResizeTest from "./components/use-window-resize/WindowResizeTest";
 
 function App() {
   return (
@@ -51,7 +52,9 @@ function App() {
         <FeatureFlags />
       </FeatureFlagGlobalState> */}
 
-      <OutsideClickTest />
+      {/* <OutsideClickTest /> */}
+
+      <WindowResizeTest />
     </div>
   );
 }
