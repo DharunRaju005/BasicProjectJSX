@@ -18,6 +18,7 @@ import FeatureFlagGlobalState from "./components/feature-flag/context/FeatureFla
 import FeatureFlags from "./components/feature-flag/FeatureFlags";
 import OutsideClickTest from "./components/use-outside-click/OutsideClickTest";
 import WindowResizeTest from "./components/use-window-resize/WindowResizeTest";
+import TopBottom from "./components/scroll-top-bottom/TopBottom";
 
 function App() {
   return (
@@ -54,7 +55,9 @@ function App() {
 
       {/* <OutsideClickTest /> */}
 
-      <WindowResizeTest />
+      {/* <WindowResizeTest /> */}
+
+      <TopBottom />
     </div>
   );
 }
